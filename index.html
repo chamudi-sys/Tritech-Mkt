@@ -312,6 +312,148 @@
 
 
 
+
+<section id="services">
+    <div class="service-card" onclick="location.href='Piping.html';">
+        <img src="images/2.jpg" alt="Piping">
+        <h3>Piping</h3>
+        <p>Explore our high-quality piping solutions.</p>
+        <button class="explore-btn">Explore Products</button>
+    </div>
+    <div class="service-card" onclick="location.href='Pumping.html';">
+        <img src="images/2.jpg" alt="Pumping">
+        <h3>Pumping</h3>
+        <p>Discover efficient pumping systems.</p>
+        <button class="explore-btn">Explore Products</button>
+    </div>
+    <div class="service-card" onclick="location.href='WaterStorage.html';">
+        <img src="images/3.jpg" alt="Water Storage">
+        <h3>Water Storage</h3>
+        <p>Find durable and reliable storage solutions.</p>
+        <button class="explore-btn">Explore Products</button>
+    </div>
+</section>
+
+<style>
+    /* Services Section */
+    #services {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        padding: 60px;
+        background-color: #f5f5f5;
+    }
+
+    /* Service Card */
+    .service-card {
+        background-color: #494947;
+        color: white;
+        border-radius: 15px;
+        padding: 20px;
+        width: 280px;
+        height: 360px;
+        text-align: center;
+        transition: transform 0.4s ease-in-out, box-shadow 0.3s ease-in-out;
+        cursor: pointer;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        position: relative;
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    /* Card Image */
+    .service-card img {
+        width: 100%;
+        height: 140px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        transition: transform 0.4s ease-in-out; /* Animation for image */
+    }
+
+    /* Hover Effect - Zoom In for Entire Card */
+    .service-card:hover {
+        transform: scale(1.08);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Hover Effect - Zoom In for Image */
+    .service-card:hover img {
+        transform: scale(1.1); /* Slight zoom on image */
+    }
+
+    /* Button */
+    .explore-btn {
+        background-color: #e6a400;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        font-size: 14px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap; /* Keeps text in one line */
+    }
+
+    .explore-btn:hover {
+        background-color: #cf8c00;
+    }
+
+    /* Scroll Fade-in Animation */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .service-card:nth-child(1) { animation-delay: 0.2s; }
+    .service-card:nth-child(2) { animation-delay: 0.4s; }
+    .service-card:nth-child(3) { animation-delay: 0.6s; }
+
+    /* Scroll Animation */
+    .scroll-reveal {
+        animation: fadeInUp 0.8s ease-in-out forwards;
+    }
+</style>
+
+<script>
+    // Scroll Animation for Cards
+    function revealCards() {
+        let cards = document.querySelectorAll(".service-card");
+        let triggerBottom = window.innerHeight * 0.85;
+
+        cards.forEach(card => {
+            let cardTop = card.getBoundingClientRect().top;
+            if (cardTop < triggerBottom) {
+                card.classList.add("scroll-reveal");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", revealCards);
+    window.addEventListener("load", revealCards);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
 <section class="products-section" style="background-color: #f8f9fa; padding: 80px 0;">
     <div class="container">
         <!-- Main Title -->
