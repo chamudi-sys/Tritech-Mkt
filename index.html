@@ -39,44 +39,45 @@
       <img src="images/10.png" alt="" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7;">
     </div>
     <!-- header section starts -->
-    <header class="header_section" style="background: rgba(32, 32, 32, 0.8); padding: 15px 0; position: relative; z-index: 10;">
+    <header style="background-color: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); padding: 15px 0; position: relative; z-index: 10; border-bottom: 1px solid rgba(255,255,255,0.15);">
       <div class="container">
         <nav class="navbar navbar-expand-lg custom_nav-container">
-          
-          <!-- Logo Image Only -->
+  
+          <!-- Logo Image -->
           <a class="navbar-brand" href="index.html">
-            <img src="images/logo2.png"  style="height: 50px;">
+            <img src="images/logo2.png" alt="Tritech Logo" style="height: 50px; width: auto; max-height: 50px;">
           </a>
-    
+  
           <!-- Mobile Toggle -->
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span style="color: #fff;">☰</span>
+            <span style="color: #ffffff;">☰</span>
           </button>
-    
+  
           <!-- Nav Links -->
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mx-auto" style="gap: 20px;">
-              <li class="nav-item active">
-                <a class="nav-link" href="index.html" style="color: #fff; font-size: 18px;">Home</a>
+            <ul class="navbar-nav mx-auto" style="gap: 20px; list-style: none; padding-left: 0; margin-bottom: 0; display: flex; flex-wrap: wrap; align-items: center;">
+              <li class="nav-item active" style="margin: 0 10px;">
+                <a class="nav-link" href="index.html" style="color: #ffffff; font-size: 18px; font-weight: 500; text-decoration: none; padding: 8px 12px;">Home</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html" style="color: #fff; font-size: 18px;">About Us</a>
+              <li class="nav-item" style="margin: 0 10px;">
+                <a class="nav-link" href="about.html" style="color: #ffffff; font-size: 18px; font-weight: 500; text-decoration: none; padding: 8px 12px;">About Us</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="products.html" style="color: #fff; font-size: 18px;">Products</a>
+              <li class="nav-item" style="margin: 0 10px;">
+                <a class="nav-link" href="products.html" style="color: #ffffff; font-size: 18px; font-weight: 500; text-decoration: none; padding: 8px 12px;">Products</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="projects.html" style="color: #fff; font-size: 18px;">Projects</a>
+              <li class="nav-item" style="margin: 0 10px;">
+                <a class="nav-link" href="projects.html" style="color: #ffffff; font-size: 18px; font-weight: 500; text-decoration: none; padding: 8px 12px;">Projects</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html" style="color: #fff; font-size: 18px;">Contact Us</a>
+              <li class="nav-item" style="margin: 0 10px;">
+                <a class="nav-link" href="contact.html" style="color: #ffffff; font-size: 18px; font-weight: 500; text-decoration: none; padding: 8px 12px;">Contact Us</a>
               </li>
             </ul>
           </div>
         </nav>
       </div>
     </header>
+    
     
     <!-- end header section -->
 
@@ -886,7 +887,38 @@ With a strong commitment to quality, reliability, and customer satisfaction, Tri
       transform: translateY(50px);
       transition: opacity 1s ease-out, transform 1s ease-out;
     }
-    
+    .header_section {
+      background: rgba(255, 255, 255, 0.8);
+      padding: 15px 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+      position: relative;
+      z-index: 10;
+    }
+  
+    .navbar-brand img {
+      height: 50px;
+      max-height: 50px;
+      width: auto;
+    }
+  
+    .navbar-nav .nav-link {
+      color: #222222 !important;
+      font-size: 18px;
+      font-weight: 500;
+      text-decoration: none;
+      padding: 8px 12px;
+      transition: color 0.3s ease;
+    }
+  
+    /* 🔹 HOVER + ACTIVE STATE COLOR HERE! */
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-item.active .nav-link {
+      color: #0050d4 !important;
+    }
+  
+    .navbar-toggler span {
+      color: #222222;
+    }
     .scroll-effect.visible {
       opacity: 1;
       transform: translateY(0);
