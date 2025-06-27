@@ -11,12 +11,12 @@
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <meta name="author" content="" />
-  <!-- <link rel="shortcut icon" href="images/favicon.png" type=""> -->
 
   <title> Tritech Marketing   </title>
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-v..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!--owl slider stylesheet -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
@@ -66,9 +66,9 @@
               <li class="nav-item" style="margin: 0 10px;">
                 <a class="nav-link" href="products.html" style="color: #ffffff; font-size: 20px; font-weight: 700; text-decoration: none; padding: 8px 12px;">Products</a>
               </li>
-              <li class="nav-item" style="margin: 0 10px;">
+              <!-- <li class="nav-item" style="margin: 0 10px;">
                 <a class="nav-link" href="projects.html" style="color: #ffffff; font-size: 20px; font-weight: 700; text-decoration: none; padding: 8px 12px;">Projects</a>
-              </li>
+              </li> -->
               <li class="nav-item" style="margin: 0 10px;">
                 <a class="nav-link" href="contact.html" style="color: #ffffff; font-size: 20px; font-weight: 700; text-decoration: none; padding: 8px 12px;">Contact Us</a>
               </li>
@@ -1135,78 +1135,60 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   <!-- footer section -->
-    <footer class="footer_section">
+  <footer class="footer_section">
     <div class="container">
       <div class="row">
+        <!-- Contact Info -->
         <div class="col-md-4 footer-col">
           <div class="footer_contact">
-            <h4>
-              Contact Us
-            </h4>
+            <h4>Contact Us</h4>
             <div class="contact_link_box">
               <a href="https://goo.gl/maps/example" target="_blank">
-                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                <span>
-                  TRITECH Marketing Int. (Pvt) Ltd, Colombo, Sri Lanka
-                </span>
+                <i class="fa-solid fa-location-dot"></i>
+                <span>TRITECH Marketing Int. (Pvt) Ltd, Colombo, Sri Lanka</span>
               </a>
-              <a href="tel:+94112345678">
-                <i class="fa fa-phone" aria-hidden="true"></i>
-                <span>
-                  Call +94 770109746
-                </span>
+              <a href="tel:+94770109746">
+                <i class="fa-solid fa-phone"></i>
+                <span>Call +94 770109746</span>
               </a>
-              <a href="mailto:info@tritech.lk">
-                <i class="fa fa-envelope" aria-hidden="true"></i>
-                <span>
-                  sales.mkt@tritech.lk
-                </span>
+              <a href="mailto:sales.mkt@tritech.lk">
+                <i class="fa-solid fa-envelope"></i>
+                <span>sales.mkt@tritech.lk</span>
               </a>
             </div>
           </div>
         </div>
+  
+        <!-- Logo and Social -->
         <div class="col-md-4 footer-col">
           <div class="footer_detail">
-            <a href="index.html" class="footer-logo">
-              TRITECH
-            </a>
-            <p>
-              Experts in industrial pump and pipe solutions engineered for efficiency, built to last.
-            </p>
+            <a href="index.html#top" class="footer-logo">TRITECH</a>
+            <p>Experts in industrial pump and pipe solutions engineered for efficiency, built to last.</p>
             <div class="footer_social">
-              <a href="https://www.houzz.com/professionals/tritech" target="_blank">
-                <i class="fa fa-home" aria-hidden="true"></i>
+              <a href="index.html#top" title="Home">
+                <i class="fa-solid fa-house"></i>
               </a>
-              <a href="https://web.facebook.com/profile.php?id=61574544635967&_rdc=1&_rdr#" target="_blank">
-                <i class="fa fa-facebook" aria-hidden="true"></i>
+              <a href="https://web.facebook.com/profile.php?id=61574544635967&_rdc=1&_rdr#" target="_blank" title="Facebook">
+                <i class="fa-brands fa-facebook"></i>
               </a>
-              <a href="https://twitter.com/tritech" target="_blank">
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-              </a>
-              <a href="https://www.linkedin.com/company/tritech" target="_blank">
-                <i class="fa fa-linkedin" aria-hidden="true"></i>
+              <a href="https://www.linkedin.com/company/tritech-engineers-pvt-ltd/" target="_blank" title="LinkedIn">
+                <i class="fa-brands fa-linkedin"></i>
               </a>
             </div>
           </div>
         </div>
+  
+        <!-- Business Hours and Quick Links -->
         <div class="col-md-4 footer-col">
-          <h4>
-            Business Hours
-          </h4>
-          <p>
-            Weekdays : 8.30am - 5.30pm
-          </p>
-          <p>
-           Weekends : 8.30am - 1.30pm
-          </p>
-          <h4>
-            Quick Links
-          </h4>
-          <p>
-            <a href="company-profile.html">Company Profile</a>
-          </p>
+          <h4>Business Hours</h4>
+          <p>Weekdays : 8.30am - 5.30pm</p>
+          <p>Weekends : 8.30am - 1.30pm</p>
+          <h4>Quick Links</h4>
+          <p><a href="company-profile.html">Company Profile</a></p>
         </div>
       </div>
+  
+      <!-- Footer Info -->
       <div class="footer-info">
         <p>
           &copy; <span id="displayYear"></span> All Rights Reserved By TRITECH Marketing Int. (Pvt) Ltd<br>
@@ -1215,6 +1197,7 @@ document.addEventListener("DOMContentLoaded", function () {
       </div>
     </div>
   </footer>
+  
   <!-- footer section -->
 
   <!-- jQery -->

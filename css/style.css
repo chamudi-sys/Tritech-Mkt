@@ -32,7 +32,7 @@ body {
 
 h1,
 h2 {
-  font-family: 'Dancing Script', cursive;
+  font-family: "Open Sans", sans-serif;
 }
 
 .heading_container {
@@ -148,7 +148,7 @@ a:focus {
 }
 
 .navbar-brand {
-  font-family: 'Dancing Script', cursive;
+  font-family: "Open Sans", sans-serif;
 }
 
 .navbar-brand span {
@@ -914,7 +914,7 @@ a:focus {
 .footer_section .footer-logo {
   font-weight: 600;
   margin-bottom: 20px;
-  font-family: 'Dancing Script', cursive;
+  font-family: "Open Sans", sans-serif;
 }
 
 .footer_section p {
