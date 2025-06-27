@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aquatherm Pipe Systems - Product Details</title>
+    <style>
+        /* Inline CSS for the details page */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 40px 0;
+            background: linear-gradient(135deg, #0066cc 0%, #003366 100%);
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        
+        .product-section {
+            margin-bottom: 60px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .product-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+        }
+        
+        .product-header {
+            padding: 25px;
+            color: white;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .product-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.1);
+        }
+        
+        .green-header {
+            background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
+        }
+        
+        .blue-header {
+            background: linear-gradient(135deg, #2196F3 0%, #0D47A1 100%);
+        }
+        
+        .red-header {
+            background: linear-gradient(135deg, #F44336 0%, #C62828 100%);
+        }
+        
+        .product-icon {
+            font-size: 2.5rem;
+            margin-right: 25px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .product-header-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .product-header h2 {
+            font-size: 2rem;
+            margin: 0 0 10px 0;
+            letter-spacing: 0.5px;
+        }
+        
+        .product-header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin: 0;
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .product-content {
+            padding: 35px;
+        }
+        
+        .product-content h3 {
+            color: #222;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .product-content h3::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: #0066cc;
+        }
+        
+        .green-content h3::after {
+            background: #4CAF50;
+        }
+        
+        .blue-content h3::after {
+            background: #2196F3;
+        }
+        
+        .red-content h3::after {
+            background: #F44336;
+        }
+        
+        .product-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 25px;
+        }
+        
+        .features-list {
+            columns: 2;
+            column-gap: 40px;
+            margin: 25px 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        
+        .features-list li {
+            margin-bottom: 12px;
+            break-inside: avoid;
+            position: relative;
+            padding-left: 25px;
+            font-size: 1.05rem;
+        }
+        
+        .features-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+        
+        .blue-features li::before {
+            color: #2196F3;
+        }
+        
+        .red-features li::before {
+            color: #F44336;
+        }
+        
+        .back-button {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 12px 25px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            border: 2px solid #0066cc;
+        }
+        
+        .back-button:hover {
+            background-color: white;
+            color: #0066cc;
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .features-list {
+                columns: 1;
+            }
+            
+            .header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .product-header {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px 20px;
+            }
+            
+            .product-icon {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+            
+            .product-content {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>AQUATHERM POLYPROPYLENE PIPE SYSTEMS</h1>
+            <p>Aquatherm's journey began in 1973, founded by Gerhard Rosenberg to produce warm water underfloor heating systems. Starting in a garage and basement, the company has grown to become a global leader in polypropylene pipe systems for plant engineering and building services.</p>
+        </div>
+        
+        <!-- Green Pipe Section -->
+        <div class="product-section">
+            <div class="product-header green-header">
+                <div class="product-icon">🌿</div>
+                <div class="product-header-content">
+                    <h2>Aquatherm Green Pipe</h2>
+                    <p>Revolutionizing the plastic piping industry with technical reliability worldwide</p>
+                </div>
+            </div>
+            <img src="images/100.jpg" alt="Aquatherm Green Pipe" class="product-image">
+            <div class="product-content green-content">
+                <p>Aquatherm Green Pipe has revolutionized the plastic piping industry, proving its technical reliability worldwide for decades. Made from corrosion-resistant, chemically inert polypropylene, it's free of heavy metals and toxic chemicals, making it ideal for various applications. Heat fusion joining ensures leak-free connections, eliminating the need for welding.</p>
+                
+                <h3>Applications</h3>
+                <ul class="features-list">
+                    <li>Potable water application</li>
+                    <li>Swimming-pool technology</li>
+                    <li>Ship building</li>
+                    <li>Geothermal</li>
+                    <li>Chemical transport</li>
+                    <li>Heating and chilled water</li>
+                    <li>Rainwater and irrigation</li>
+                    <li>Open space heating and cooling also possible</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Blue Pipe Section -->
+        <div class="product-section">
+            <div class="product-header blue-header">
+                <div class="product-icon">💧</div>
+                <div class="product-header-content">
+                    <h2>Aquatherm Blue Pipe</h2>
+                    <p>Designed for efficient heating and cooling distribution in closed systems</p>
+                </div>
+            </div>
+            <img src="images/101.jpg" alt="Aquatherm Blue Pipe" class="product-image">
+            <div class="product-content blue-content">
+                <p>Aquatherm Blue Pipe is designed for efficient heating and cooling distribution in closed systems, as well as a range of industrial applications. Developed to prevent corrosion in heating systems, it quickly expanded due to its numerous benefits in various piping installations. Trusted worldwide, Aquatherm Blue Pipe is used in hotels, stadiums, schools, offices, and industrial projects.</p>
+                
+                <h3>Applications</h3>
+                <ul class="features-list blue-features">
+                    <li>Heating system construction</li>
+                    <li>Chilled water technology</li>
+                    <li>Chemical transport</li>
+                    <li>Rainwater and irrigation</li>
+                    <li>Compressed air</li>
+                    <li>Floor-heating system</li>
+                    <li>Ship building application</li>
+                    <li>Geothermal</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Red Pipe Section -->
+        <div class="product-section">
+            <div class="product-header red-header">
+                <div class="product-icon">🔥</div>
+                <div class="product-header-content">
+                    <h2>Aquatherm Red Pipe</h2>
+                    <p>Specially designed for fire protection systems</p>
+                </div>
+            </div>
+            <img src="images/102.jpg" alt="Aquatherm Red Pipe" class="product-image">
+            <div class="product-content red-content">
+                <p>Aquatherm Red Pipe is specially designed for fire protection systems, offering reliable performance in high-risk environments. Made from durable polypropylene, it ensures optimal fire safety through a corrosion-resistant, chemical-free solution. Ideal for both commercial and industrial applications, Aquatherm Red Pipe is trusted for its long-lasting, leak-free connections.</p>
+                
+                <h3>Key Features</h3>
+                <ul class="features-list red-features">
+                    <li>Fire protection sprinkler systems</li>
+                    <li>FM, LPCB and VDS certified and quality inspected</li>
+                    <li>Low flammability according to DIN4102-1</li>
+                    <li>Maximum working temperature: 125°F (52°C)</li>
+                    <li>Maximum pressure: 175 (12.2 bar)</li>
+                    <li>No accumulation of corrosion</li>
+                </ul>
+            </div>
+        </div>
+        
+        <a href="products.html" class="back-button">← Back to Products</a>
+    </div>
+</body>
+</html>
