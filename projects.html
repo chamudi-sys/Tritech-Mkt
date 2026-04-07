@@ -28,57 +28,84 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
+
+<!-- PREMIUM MODERN AESTHETIC OVERRIDE -->
+<style id="premium-modern-aesthetic">
+/* Import Modern Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap');
+
+body, p, a, div, span, li, button {
+  font-family: 'Inter', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand, .nav-link, .elegant-heading, .service-title {
+  font-family: 'Outfit', sans-serif !important;
+  letter-spacing: -0.5px !important;
+}
+
+/* Fixed Glass Navbar */
+.glass-nav {
+  position: fixed;
+  top: 0; width: 100%; z-index: 1000;
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border-bottom: 1px solid rgba(0,0,0,0.05) !important;
+  transition: all 0.3s ease !important;
+  padding: 15px 0 !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.02) !important;
+}
+.glass-nav .nav-link {
+  color: #0f172a !important;
+  font-weight: 500 !important;
+  margin: 0 15px !important;
+  position: relative !important;
+  transition: 0.3s ease !important;
+}
+.glass-nav .nav-link:hover {
+  color: #d97706 !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Standardize backgrounds if page feels too legacy */
+.sub_page {
+    background-color: #f1f5f9 !important;
+}
+</style>
+
 </head>
 
 <body class="sub_page">
+
+  <!-- Floating Nav -->
+  <nav class="glass-nav">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+      <a href="index.html">
+        <img src="images/logo2.png" alt="Tritech" style="height: 45px;">
+      </a>
+      <div class="d-none d-lg-flex" style="display: flex;">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </div>
+      <button class="btn d-lg-none" style="color:#0f172a;"><i class="fa fa-bars" style="font-size: 1.5rem;"></i></button>
+    </div>
+  </nav>
+
 
   <div class="hero_area" style="position: relative;">
     <div class="bg-box" style="position: absolute; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6);">
       <img src="images/hero-bg.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
     </div>
-    <!-- header section starts -->
-    <header class="header_section" style="background: rgba(0, 0, 0, 0.8); padding: 15px 0; position: relative; z-index: 10;">
-      <div class="container">
-        <nav class="navbar navbar-expand-lg custom_nav-container">
-          <a class="navbar-brand" href="index.html" style="color: #fff; font-size: 24px; font-weight: bold;">
-            TRITECH
-          </a>
-
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="" style="color: #fff;">☰</span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mx-auto" style="gap: 20px;">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html" style="color: #fff; font-size: 18px;">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html" style="color: #fff; font-size: 18px;">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="products.html" style="color: #fff; font-size: 18px;">Products</a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="projects.html" style="color: #FFD700; font-size: 18px;">Projects</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html" style="color: #fff; font-size: 18px;">Contact Us</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <!-- end header section -->
+    
   </div>
 
   <!-- Projects Section -->
-  <section class="projects_section" style="background-color: #121212; padding: 80px 0;">
+  <section class="projects_section" style="background-color: #f1f5f9; padding: 80px 0;">
     <div class="container">
       <div class="heading_container heading_center" style="margin-bottom: 60px;">
-        <h2 style="font-size: 42px; font-weight: 700; color: #FFD700; text-transform: uppercase; letter-spacing: 1px;">
+        <h2 style="font-size: 42px; font-weight: 700; color: #0f172a; text-transform: uppercase; letter-spacing: 1px;">
           Our Projects
         </h2>
         <p style="color: #b0b0b0; font-size: 18px; max-width: 800px; margin: 20px auto 0; line-height: 1.6;">
@@ -94,14 +121,14 @@
               <img src="images/hero-bg.jpg" alt="Commercial Complex Project" style="width: 100%; height: 100%; object-fit: cover; transition: all 0.5s ease;">
             </div>
             <div class="project_details" style="padding: 30px;">
-              <h3 style="font-size: 24px; font-weight: 600; color: #FFD700; margin-bottom: 15px;">Commercial Complex Project</h3>
+              <h3 style="font-size: 24px; font-weight: 600; color: #0f172a; margin-bottom: 15px;">Commercial Complex Project</h3>
               <p style="color: #b0b0b0; margin-bottom: 20px; line-height: 1.6;">
                 A state-of-the-art commercial complex in Colombo featuring modern architectural design and sustainable engineering solutions. Completed in 2022 with 25,000 sqft of space.
               </p>
               <div class="project_features" style="display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 25px;">
-                <span style="background: #252525; color: #FFD700; padding: 5px 15px; border-radius: 20px; font-size: 14px;">Civil Engineering</span>
-                <span style="background: #252525; color: #FFD700; padding: 5px 15px; border-radius: 20px; font-size: 14px;">Mechanical</span>
-                <span style="background: #252525; color: #FFD700; padding: 5px 15px; border-radius: 20px; font-size: 14px;">Plumbing</span>
+                <span style="background: #252525; color: #0f172a; padding: 5px 15px; border-radius: 20px; font-size: 14px;">Civil Engineering</span>
+                <span style="background: #252525; color: #0f172a; padding: 5px 15px; border-radius: 20px; font-size: 14px;">Mechanical</span>
+                <span style="background: #252525; color: #0f172a; padding: 5px 15px; border-radius: 20px; font-size: 14px;">Plumbing</span>
               </div>
               <a href="#" class="view_project_btn" style="display: inline-block; padding: 10px 25px; background: #FFD700; color: #121212; font-weight: 600; border-radius: 5px; text-decoration: none; transition: all 0.3s ease;">View Details</a>
             </div>
@@ -115,14 +142,14 @@
               <img src="images/hero-bg.jpg" alt="Industrial Plant Installation" style="width: 100%; height: 100%; object-fit: cover; transition: all 0.5s ease;">
             </div>
             <div class="project_details" style="padding: 30px;">
-              <h3 style="font-size: 24px; font-weight: 600; color: #FFD700; margin-bottom: 15px;">Industrial Plant Installation</h3>
+              <h3 style="font-size: 24px; font-weight: 600; color: #0f172a; margin-bottom: 15px;">Industrial Plant Installation</h3>
               <p style="color: #b0b0b0; margin-bottom: 20px; line-height: 1.6;">
                 Complete mechanical and plumbing installation for a manufacturing plant in Katunayake. Project included piping systems, pump stations, and wastewater treatment solutions.
               </p>
               <div class="project_features" style="display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 25px;">
-                <span style="background: #252525; color: #FFD700; padding: 5px 15px; border-radius: 20px; font-size: 14px;">Mechanical</span>
-                <span style="background: #252525; color: #FFD700; padding: 5px 15px; border-radius: 20px; font-size: 14px;">Plumbing</span>
-                <span style="background: #252525; color: #FFD700; padding: 5px 15px; border-radius: 20px; font-size: 14px;">Piping</span>
+                <span style="background: #252525; color: #0f172a; padding: 5px 15px; border-radius: 20px; font-size: 14px;">Mechanical</span>
+                <span style="background: #252525; color: #0f172a; padding: 5px 15px; border-radius: 20px; font-size: 14px;">Plumbing</span>
+                <span style="background: #252525; color: #0f172a; padding: 5px 15px; border-radius: 20px; font-size: 14px;">Piping</span>
               </div>
               <a href="#" class="view_project_btn" style="display: inline-block; padding: 10px 25px; background: #FFD700; color: #121212; font-weight: 600; border-radius: 5px; text-decoration: none; transition: all 0.3s ease;">View Details</a>
             </div>
@@ -136,14 +163,14 @@
               <img src="images/hero-bg.jpg" alt="Residential Tower Development" style="width: 100%; height: 100%; object-fit: cover; transition: all 0.5s ease;">
             </div>
             <div class="project_details" style="padding: 30px;">
-              <h3 style="font-size: 24px; font-weight: 600; color: #FFD700; margin-bottom: 15px;">Residential Tower Development</h3>
+              <h3 style="font-size: 24px; font-weight: 600; color: #0f172a; margin-bottom: 15px;">Residential Tower Development</h3>
               <p style="color: #b0b0b0; margin-bottom: 20px; line-height: 1.6;">
                 32-story luxury residential tower in Colombo 03 featuring advanced plumbing and mechanical systems. Our team handled all MEP installations with precision engineering.
               </p>
               <div class="project_features" style="display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 25px;">
-                <span style="background: #252525; color: #FFD700; padding: 5px 15px; border-radius: 20px; font-size: 14px;">Civil</span>
-                <span style="background: #252525; color: #FFD700; padding: 5px 15px; border-radius: 20px; font-size: 14px;">MEP</span>
-                <span style="background: #252525; color: #FFD700; padding: 5px 15px; border-radius: 20px; font-size: 14px;">Plumbing</span>
+                <span style="background: #252525; color: #0f172a; padding: 5px 15px; border-radius: 20px; font-size: 14px;">Civil</span>
+                <span style="background: #252525; color: #0f172a; padding: 5px 15px; border-radius: 20px; font-size: 14px;">MEP</span>
+                <span style="background: #252525; color: #0f172a; padding: 5px 15px; border-radius: 20px; font-size: 14px;">Plumbing</span>
               </div>
               <a href="#" class="view_project_btn" style="display: inline-block; padding: 10px 25px; background: #FFD700; color: #121212; font-weight: 600; border-radius: 5px; text-decoration: none; transition: all 0.3s ease;">View Details</a>
             </div>
@@ -157,14 +184,14 @@
               <img src="images/hero-bg.jpg" alt="Water Treatment Facility" style="width: 100%; height: 100%; object-fit: cover; transition: all 0.5s ease;">
             </div>
             <div class="project_details" style="padding: 30px;">
-              <h3 style="font-size: 24px; font-weight: 600; color: #FFD700; margin-bottom: 15px;">Water Treatment Facility</h3>
+              <h3 style="font-size: 24px; font-weight: 600; color: #0f172a; margin-bottom: 15px;">Water Treatment Facility</h3>
               <p style="color: #b0b0b0; margin-bottom: 20px; line-height: 1.6;">
                 Designed and installed a complete water treatment plant for a municipal project in Gampaha. Capacity of 50,000 liters per day with advanced filtration systems.
               </p>
               <div class="project_features" style="display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 25px;">
-                <span style="background: #252525; color: #FFD700; padding: 5px 15px; border-radius: 20px; font-size: 14px;">Water Treatment</span>
-                <span style="background: #252525; color: #FFD700; padding: 5px 15px; border-radius: 20px; font-size: 14px;">Piping</span>
-                <span style="background: #252525; color: #FFD700; padding: 5px 15px; border-radius: 20px; font-size: 14px;">Filtration</span>
+                <span style="background: #252525; color: #0f172a; padding: 5px 15px; border-radius: 20px; font-size: 14px;">Water Treatment</span>
+                <span style="background: #252525; color: #0f172a; padding: 5px 15px; border-radius: 20px; font-size: 14px;">Piping</span>
+                <span style="background: #252525; color: #0f172a; padding: 5px 15px; border-radius: 20px; font-size: 14px;">Filtration</span>
               </div>
               <a href="#" class="view_project_btn" style="display: inline-block; padding: 10px 25px; background: #FFD700; color: #121212; font-weight: 600; border-radius: 5px; text-decoration: none; transition: all 0.3s ease;">View Details</a>
             </div>
@@ -178,14 +205,14 @@
               <img src="images/hero-bg.jpg" alt="Hotel Renovation Project" style="width: 100%; height: 100%; object-fit: cover; transition: all 0.5s ease;">
             </div>
             <div class="project_details" style="padding: 30px;">
-              <h3 style="font-size: 24px; font-weight: 600; color: #FFD700; margin-bottom: 15px;">Hotel Renovation Project</h3>
+              <h3 style="font-size: 24px; font-weight: 600; color: #0f172a; margin-bottom: 15px;">Hotel Renovation Project</h3>
               <p style="color: #b0b0b0; margin-bottom: 20px; line-height: 1.6;">
                 Complete mechanical and plumbing system overhaul for a 5-star hotel in Negombo. Project completed within tight deadlines without disrupting hotel operations.
               </p>
               <div class="project_features" style="display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 25px;">
-                <span style="background: #252525; color: #FFD700; padding: 5px 15px; border-radius: 20px; font-size: 14px;">Renovation</span>
-                <span style="background: #252525; color: #FFD700; padding: 5px 15px; border-radius: 20px; font-size: 14px;">HVAC</span>
-                <span style="background: #252525; color: #FFD700; padding: 5px 15px; border-radius: 20px; font-size: 14px;">Plumbing</span>
+                <span style="background: #252525; color: #0f172a; padding: 5px 15px; border-radius: 20px; font-size: 14px;">Renovation</span>
+                <span style="background: #252525; color: #0f172a; padding: 5px 15px; border-radius: 20px; font-size: 14px;">HVAC</span>
+                <span style="background: #252525; color: #0f172a; padding: 5px 15px; border-radius: 20px; font-size: 14px;">Plumbing</span>
               </div>
               <a href="#" class="view_project_btn" style="display: inline-block; padding: 10px 25px; background: #FFD700; color: #121212; font-weight: 600; border-radius: 5px; text-decoration: none; transition: all 0.3s ease;">View Details</a>
             </div>
@@ -199,14 +226,14 @@
               <img src="images/hero-bg.jpg" alt="Shopping Mall Development" style="width: 100%; height: 100%; object-fit: cover; transition: all 0.5s ease;">
             </div>
             <div class="project_details" style="padding: 30px;">
-              <h3 style="font-size: 24px; font-weight: 600; color: #FFD700; margin-bottom: 15px;">Shopping Mall Development</h3>
+              <h3 style="font-size: 24px; font-weight: 600; color: #0f172a; margin-bottom: 15px;">Shopping Mall Development</h3>
               <p style="color: #b0b0b0; margin-bottom: 20px; line-height: 1.6;">
                 MEP installations for a large shopping complex in Kandy. Project featured innovative solutions for energy efficiency and water conservation.
               </p>
               <div class="project_features" style="display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 25px;">
-                <span style="background: #252525; color: #FFD700; padding: 5px 15px; border-radius: 20px; font-size: 14px;">MEP</span>
-                <span style="background: #252525; color: #FFD700; padding: 5px 15px; border-radius: 20px; font-size: 14px;">Energy Efficient</span>
-                <span style="background: #252525; color: #FFD700; padding: 5px 15px; border-radius: 20px; font-size: 14px;">Large Scale</span>
+                <span style="background: #252525; color: #0f172a; padding: 5px 15px; border-radius: 20px; font-size: 14px;">MEP</span>
+                <span style="background: #252525; color: #0f172a; padding: 5px 15px; border-radius: 20px; font-size: 14px;">Energy Efficient</span>
+                <span style="background: #252525; color: #0f172a; padding: 5px 15px; border-radius: 20px; font-size: 14px;">Large Scale</span>
               </div>
               <a href="#" class="view_project_btn" style="display: inline-block; padding: 10px 25px; background: #FFD700; color: #121212; font-weight: 600; border-radius: 5px; text-decoration: none; transition: all 0.3s ease;">View Details</a>
             </div>
@@ -220,14 +247,14 @@
               <img src="images/hero-bg.jpg" alt="Hospital Infrastructure" style="width: 100%; height: 100%; object-fit: cover; transition: all 0.5s ease;">
             </div>
             <div class="project_details" style="padding: 30px;">
-              <h3 style="font-size: 24px; font-weight: 600; color: #FFD700; margin-bottom: 15px;">Hospital Infrastructure</h3>
+              <h3 style="font-size: 24px; font-weight: 600; color: #0f172a; margin-bottom: 15px;">Hospital Infrastructure</h3>
               <p style="color: #b0b0b0; margin-bottom: 20px; line-height: 1.6;">
                 Specialized plumbing and medical gas systems installation for a private hospital in Colombo. Compliant with all international healthcare standards.
               </p>
               <div class="project_features" style="display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 25px;">
-                <span style="background: #252525; color: #FFD700; padding: 5px 15px; border-radius: 20px; font-size: 14px;">Healthcare</span>
-                <span style="background: #252525; color: #FFD700; padding: 5px 15px; border-radius: 20px; font-size: 14px;">Medical Gas</span>
-                <span style="background: #252525; color: #FFD700; padding: 5px 15px; border-radius: 20px; font-size: 14px;">Specialized</span>
+                <span style="background: #252525; color: #0f172a; padding: 5px 15px; border-radius: 20px; font-size: 14px;">Healthcare</span>
+                <span style="background: #252525; color: #0f172a; padding: 5px 15px; border-radius: 20px; font-size: 14px;">Medical Gas</span>
+                <span style="background: #252525; color: #0f172a; padding: 5px 15px; border-radius: 20px; font-size: 14px;">Specialized</span>
               </div>
               <a href="#" class="view_project_btn" style="display: inline-block; padding: 10px 25px; background: #FFD700; color: #121212; font-weight: 600; border-radius: 5px; text-decoration: none; transition: all 0.3s ease;">View Details</a>
             </div>
@@ -241,14 +268,14 @@
               <img src="images/hero-bg.jpg" alt="Industrial Warehouse" style="width: 100%; height: 100%; object-fit: cover; transition: all 0.5s ease;">
             </div>
             <div class="project_details" style="padding: 30px;">
-              <h3 style="font-size: 24px; font-weight: 600; color: #FFD700; margin-bottom: 15px;">Industrial Warehouse</h3>
+              <h3 style="font-size: 24px; font-weight: 600; color: #0f172a; margin-bottom: 15px;">Industrial Warehouse</h3>
               <p style="color: #b0b0b0; margin-bottom: 20px; line-height: 1.6;">
                 Complete civil and mechanical works for a 100,000 sqft warehouse facility in Biyagama. Project included specialized flooring and drainage systems.
               </p>
               <div class="project_features" style="display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 25px;">
-                <span style="background: #252525; color: #FFD700; padding: 5px 15px; border-radius: 20px; font-size: 14px;">Industrial</span>
-                <span style="background: #252525; color: #FFD700; padding: 5px 15px; border-radius: 20px; font-size: 14px;">Warehouse</span>
-                <span style="background: #252525; color: #FFD700; padding: 5px 15px; border-radius: 20px; font-size: 14px;">Large Scale</span>
+                <span style="background: #252525; color: #0f172a; padding: 5px 15px; border-radius: 20px; font-size: 14px;">Industrial</span>
+                <span style="background: #252525; color: #0f172a; padding: 5px 15px; border-radius: 20px; font-size: 14px;">Warehouse</span>
+                <span style="background: #252525; color: #0f172a; padding: 5px 15px; border-radius: 20px; font-size: 14px;">Large Scale</span>
               </div>
               <a href="#" class="view_project_btn" style="display: inline-block; padding: 10px 25px; background: #FFD700; color: #121212; font-weight: 600; border-radius: 5px; text-decoration: none; transition: all 0.3s ease;">View Details</a>
             </div>
@@ -259,29 +286,29 @@
   </section>
 
   <!-- footer section -->
-  <footer class="footer_section" style="background: #0a0a0a; color: #fff; padding: 70px 0 0; border-top: 1px solid #333;">
+  <footer class="footer_section" style="background: #0a0a0a; color: #0f172a; padding: 70px 0 0; border-top: 1px solid #333;">
     <div class="container">
       <div class="row">
         <div class="col-md-4 footer-col">
           <div class="footer_contact">
-            <h4 style="font-size: 22px; font-weight: 600; margin-bottom: 25px; color: #FFD700;">
+            <h4 style="font-size: 22px; font-weight: 600; margin-bottom: 25px; color: #0f172a;">
               Contact Us
             </h4>
             <div class="contact_link_box">
               <a href="https://goo.gl/maps/example" target="_blank" style="color: #aaa; margin-bottom: 15px; display: block; text-decoration: none;">
-                <i class="fa fa-map-marker" aria-hidden="true" style="margin-right: 10px; color: #FFD700;"></i>
+                <i class="fa fa-map-marker" aria-hidden="true" style="margin-right: 10px; color: #0f172a;"></i>
                 <span>
                   TRITECH Engineers (Pvt) Ltd, Colombo, Sri Lanka
                 </span>
               </a>
               <a href="tel:+94112345678" style="color: #aaa; margin-bottom: 15px; display: block; text-decoration: none;">
-                <i class="fa fa-phone" aria-hidden="true" style="margin-right: 10px; color: #FFD700;"></i>
+                <i class="fa fa-phone" aria-hidden="true" style="margin-right: 10px; color: #0f172a;"></i>
                 <span>
                   Call +94 112345678
                 </span>
               </a>
               <a href="mailto:info@tritech.lk" style="color: #aaa; margin-bottom: 15px; display: block; text-decoration: none;">
-                <i class="fa fa-envelope" aria-hidden="true" style="margin-right: 10px; color: #FFD700;"></i>
+                <i class="fa fa-envelope" aria-hidden="true" style="margin-right: 10px; color: #0f172a;"></i>
                 <span>
                   info@tritech.lk
                 </span>
@@ -291,30 +318,30 @@
         </div>
         <div class="col-md-4 footer-col">
           <div class="footer_detail">
-            <a href="index.html" class="footer-logo" style="font-size: 28px; font-weight: 700; color: #FFD700; margin-bottom: 20px; display: block; text-decoration: none;">
+            <a href="index.html" class="footer-logo" style="font-size: 28px; font-weight: 700; color: #0f172a; margin-bottom: 20px; display: block; text-decoration: none;">
               TRITECH
             </a>
             <p style="color: #aaa; line-height: 1.8; margin-bottom: 25px;">
               One of the leading Engineering service providers in Sri Lanka since 1999, specializing in Civil, Mechanical, Plumbing & Environmental engineering solutions.
             </p>
             <div class="footer_social">
-              <a href="https://www.houzz.com/professionals/tritech" target="_blank" style="color: #FFD700; margin-right: 15px; font-size: 20px;">
+              <a href="https://www.houzz.com/professionals/tritech" target="_blank" style="color: #0f172a; margin-right: 15px; font-size: 20px;">
                 <i class="fa fa-home" aria-hidden="true"></i>
               </a>
-              <a href="https://www.facebook.com/tritech" target="_blank" style="color: #FFD700; margin-right: 15px; font-size: 20px;">
+              <a href="https://www.facebook.com/tritech" target="_blank" style="color: #0f172a; margin-right: 15px; font-size: 20px;">
                 <i class="fa fa-facebook" aria-hidden="true"></i>
               </a>
-              <a href="https://twitter.com/tritech" target="_blank" style="color: #FFD700; margin-right: 15px; font-size: 20px;">
+              <a href="https://twitter.com/tritech" target="_blank" style="color: #0f172a; margin-right: 15px; font-size: 20px;">
                 <i class="fa fa-twitter" aria-hidden="true"></i>
               </a>
-              <a href="https://www.linkedin.com/company/tritech" target="_blank" style="color: #FFD700; font-size: 20px;">
+              <a href="https://www.linkedin.com/company/tritech" target="_blank" style="color: #0f172a; font-size: 20px;">
                 <i class="fa fa-linkedin" aria-hidden="true"></i>
               </a>
             </div>
           </div>
         </div>
         <div class="col-md-4 footer-col">
-          <h4 style="font-size: 22px; font-weight: 600; margin-bottom: 25px; color: #FFD700;">
+          <h4 style="font-size: 22px; font-weight: 600; margin-bottom: 25px; color: #0f172a;">
             Business Hours
           </h4>
           <p style="color: #aaa; margin-bottom: 10px;">
@@ -323,12 +350,12 @@
           <p style="color: #aaa; margin-bottom: 30px;">
             8.30 Am - 5.30 Pm
           </p>
-          <h4 style="font-size: 22px; font-weight: 600; margin-bottom: 25px; color: #FFD700;">
+          <h4 style="font-size: 22px; font-weight: 600; margin-bottom: 25px; color: #0f172a;">
             Quick Links
           </h4>
           <p style="color: #aaa;">
-            <a href="company-profile.html" style="color: #FFD700; text-decoration: none; margin-right: 10px;">Company Profile</a> | 
-            <a href="projects.html" style="color: #FFD700; text-decoration: none; margin-left: 10px;">Our Projects</a>
+            <a href="company-profile.html" style="color: #0f172a; text-decoration: none; margin-right: 10px;">Company Profile</a> | 
+            <a href="projects.html" style="color: #0f172a; text-decoration: none; margin-left: 10px;">Our Projects</a>
           </p>
         </div>
       </div>

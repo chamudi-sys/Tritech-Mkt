@@ -208,11 +208,62 @@
             }
         }
     </style>
+
+<!-- PREMIUM MODERN AESTHETIC OVERRIDE -->
+<style id="premium-modern-aesthetic">
+/* Import Modern Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap');
+
+body, p, a, div, span, li, button {
+  font-family: 'Inter', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand, .nav-link, .elegant-heading, .service-title {
+  font-family: 'Outfit', sans-serif !important;
+  letter-spacing: -0.5px !important;
+}
+
+/* Fixed Glass Navbar */
+.glass-nav {
+  position: fixed;
+  top: 0; width: 100%; z-index: 1000;
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border-bottom: 1px solid rgba(0,0,0,0.05) !important;
+  transition: all 0.3s ease !important;
+  padding: 15px 0 !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.02) !important;
+}
+.glass-nav .nav-link {
+  color: #0f172a !important;
+  font-weight: 500 !important;
+  margin: 0 15px !important;
+  position: relative !important;
+  transition: 0.3s ease !important;
+}
+.glass-nav .nav-link:hover {
+  color: #d97706 !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Standardize backgrounds if page feels too legacy */
+.sub_page {
+    background-color: #f1f5f9 !important;
+}
+</style>
+
 </head>
 <body>
     <div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center; padding: 20px; background: #ffffff;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.02); margin-bottom: 20px; border-bottom: 1px solid rgba(0,0,0,0.1);">
+        <img src="images/logo2.png" alt="Tritech Logo" style="height: 50px;">
+        <img src="images/puhei.jpeg" alt="Brand Logo" style="height: 50px; max-width: 150px; object-fit: contain; background: white; padding: 5px; border-radius: 5px;">
+    </div>
+
         <div class="header">
-            <h1>HDPE (Pnhai) PIPE SYSTEMS</h1>
+            <h1>HDPE (Puhei) pipe systems</h1>
             <p>High-density polyethylene pipes offer superior durability and flexibility for modern piping applications. With exceptional chemical resistance and long service life, HDPE pipes are the ideal solution for demanding environments.</p>
         </div>
         
@@ -225,7 +276,7 @@
                     <p>Durable, flexible piping solutions for modern infrastructure</p>
                 </div>
             </div>
-            <img src="images/103.jpg" alt="HDPE (Pnhai) Pipes" class="product-image">
+            <img src="images/single_hdpe_pipe.png" alt="HDPE (Pnhai) Pipes" class="product-image">
             <div class="product-content">
                 <p>HDPE pipes and fittings offer numerous advantages, including non-toxicity, corrosion resistance, and excellent flexibility. Free from heavy metals, they are sanitary and ensure no secondary pollution. The smooth interior walls promote high flow capacity, while their flexibility allows for coil delivery, reducing installation costs.</p>
                 
@@ -255,7 +306,9 @@
             </div>
         </div>
         
-        <a href="products.html" class="back-button">← Back to Products</a>
+        
     </div>
+
+    <div style="text-align: center; margin: 40px 0;"><a href="javascript:history.back()" style="display: inline-block; padding: 12px 25px; background-color: #3a7bd5; color: white; text-decoration: none; border-radius: 4px; font-size: 1.1rem; transition: background 0.3s ease;">← Back</a></div>
 </body>
 </html>

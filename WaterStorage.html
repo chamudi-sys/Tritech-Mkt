@@ -35,12 +35,12 @@
 
   <style>
     body {
-      background-color: #121212;
+      background-color: #f1f5f9;
       color: #e0e0e0;
     }
     
     .products-section {
-      background-color: #121212;
+      background-color: #f1f5f9;
       padding: 80px 0;
     }
     
@@ -95,47 +95,74 @@
       background: #FFD700 !important;
     }
   </style>
+
+<!-- PREMIUM MODERN AESTHETIC OVERRIDE -->
+<style id="premium-modern-aesthetic">
+/* Import Modern Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap');
+
+body, p, a, div, span, li, button {
+  font-family: 'Inter', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand, .nav-link, .elegant-heading, .service-title {
+  font-family: 'Outfit', sans-serif !important;
+  letter-spacing: -0.5px !important;
+}
+
+/* Fixed Glass Navbar */
+.glass-nav {
+  position: fixed;
+  top: 0; width: 100%; z-index: 1000;
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border-bottom: 1px solid rgba(0,0,0,0.05) !important;
+  transition: all 0.3s ease !important;
+  padding: 15px 0 !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.02) !important;
+}
+.glass-nav .nav-link {
+  color: #0f172a !important;
+  font-weight: 500 !important;
+  margin: 0 15px !important;
+  position: relative !important;
+  transition: 0.3s ease !important;
+}
+.glass-nav .nav-link:hover {
+  color: #d97706 !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Standardize backgrounds if page feels too legacy */
+.sub_page {
+    background-color: #f1f5f9 !important;
+}
+</style>
+
 </head>
 
 <body>
 
-  <div class="hero_area" style="position: relative; height: auto; min-height: 0;">
-    <!-- header section starts -->
-    <header class="header_section" style="background: rgba(0, 0, 0, 0.9); padding: 15px 0; position: relative; z-index: 10; border-bottom: 1px solid #333;">
-      <div class="container">
-        <nav class="navbar navbar-expand-lg custom_nav-container">
-          <a class="navbar-brand" href="index.html" style="color: #FFD700; font-size: 24px; font-weight: bold;">
-            TRITECH
-          </a>
-
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="" style="color: #FFD700;">☰</span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mx-auto" style="gap: 20px;">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html" style="color: #fff; font-size: 18px;">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html" style="color: #fff; font-size: 18px;">About Us</a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="products.html" style="color: #FFD700; font-size: 18px;">Products</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="projects.html" style="color: #fff; font-size: 18px;">Projects</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html" style="color: #fff; font-size: 18px;">Contact Us</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
+  <!-- Floating Nav -->
+  <nav class="glass-nav">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+      <a href="index.html">
+        <img src="images/logo2.png" alt="Tritech" style="height: 45px;">
+      </a>
+      <div class="d-none d-lg-flex" style="display: flex;">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
       </div>
-    </header>
-    <!-- end header section -->
+      <button class="btn d-lg-none" style="color:#0f172a;"><i class="fa fa-bars" style="font-size: 1.5rem;"></i></button>
+    </div>
+  </nav>
+
+
+  <div class="hero_area" style="position: relative; height: auto; min-height: 0;">
+    
   </div>
 
   <!-- Products Section -->
@@ -190,29 +217,29 @@
   </section>
 
   <!-- footer section -->
-  <footer class="footer_section" style="background: #0a0a0a; color: #fff; padding: 70px 0 0; border-top: 1px solid #333;">
+  <footer class="footer_section" style="background: #0a0a0a; color: #0f172a; padding: 70px 0 0; border-top: 1px solid #333;">
     <div class="container">
       <div class="row">
         <div class="col-md-4 footer-col">
           <div class="footer_contact">
-            <h4 style="font-size: 22px; font-weight: 600; margin-bottom: 25px; color: #FFD700;">
+            <h4 style="font-size: 22px; font-weight: 600; margin-bottom: 25px; color: #0f172a;">
               Contact Us
             </h4>
             <div class="contact_link_box">
               <a href="https://goo.gl/maps/example" target="_blank" style="color: #aaa; margin-bottom: 15px; display: block; text-decoration: none;">
-                <i class="fa fa-map-marker" aria-hidden="true" style="margin-right: 10px; color: #FFD700;"></i>
+                <i class="fa fa-map-marker" aria-hidden="true" style="margin-right: 10px; color: #0f172a;"></i>
                 <span>
                   TRITECH Engineers (Pvt) Ltd, Colombo, Sri Lanka
                 </span>
               </a>
               <a href="tel:+94112345678" style="color: #aaa; margin-bottom: 15px; display: block; text-decoration: none;">
-                <i class="fa fa-phone" aria-hidden="true" style="margin-right: 10px; color: #FFD700;"></i>
+                <i class="fa fa-phone" aria-hidden="true" style="margin-right: 10px; color: #0f172a;"></i>
                 <span>
                   Call +94 112345678
                 </span>
               </a>
               <a href="mailto:info@tritech.lk" style="color: #aaa; margin-bottom: 15px; display: block; text-decoration: none;">
-                <i class="fa fa-envelope" aria-hidden="true" style="margin-right: 10px; color: #FFD700;"></i>
+                <i class="fa fa-envelope" aria-hidden="true" style="margin-right: 10px; color: #0f172a;"></i>
                 <span>
                   info@tritech.lk
                 </span>
@@ -222,30 +249,30 @@
         </div>
         <div class="col-md-4 footer-col">
           <div class="footer_detail">
-            <a href="index.html" class="footer-logo" style="font-size: 28px; font-weight: 700; color: #FFD700; margin-bottom: 20px; display: block; text-decoration: none;">
+            <a href="index.html" class="footer-logo" style="font-size: 28px; font-weight: 700; color: #0f172a; margin-bottom: 20px; display: block; text-decoration: none;">
               TRITECH
             </a>
             <p style="color: #aaa; line-height: 1.8; margin-bottom: 25px;">
               One of the leading Engineering service providers in Sri Lanka since 1999, specializing in Civil, Mechanical, Plumbing & Environmental engineering solutions.
             </p>
             <div class="footer_social">
-              <a href="https://www.houzz.com/professionals/tritech" target="_blank" style="color: #FFD700; margin-right: 15px; font-size: 20px;">
+              <a href="https://www.houzz.com/professionals/tritech" target="_blank" style="color: #0f172a; margin-right: 15px; font-size: 20px;">
                 <i class="fa fa-home" aria-hidden="true"></i>
               </a>
-              <a href="https://www.facebook.com/tritech" target="_blank" style="color: #FFD700; margin-right: 15px; font-size: 20px;">
+              <a href="https://www.facebook.com/tritech" target="_blank" style="color: #0f172a; margin-right: 15px; font-size: 20px;">
                 <i class="fa fa-facebook" aria-hidden="true"></i>
               </a>
-              <a href="https://twitter.com/tritech" target="_blank" style="color: #FFD700; margin-right: 15px; font-size: 20px;">
+              <a href="https://twitter.com/tritech" target="_blank" style="color: #0f172a; margin-right: 15px; font-size: 20px;">
                 <i class="fa fa-twitter" aria-hidden="true"></i>
               </a>
-              <a href="https://www.linkedin.com/company/tritech" target="_blank" style="color: #FFD700; font-size: 20px;">
+              <a href="https://www.linkedin.com/company/tritech" target="_blank" style="color: #0f172a; font-size: 20px;">
                 <i class="fa fa-linkedin" aria-hidden="true"></i>
               </a>
             </div>
           </div>
         </div>
         <div class="col-md-4 footer-col">
-          <h4 style="font-size: 22px; font-weight: 600; margin-bottom: 25px; color: #FFD700;">
+          <h4 style="font-size: 22px; font-weight: 600; margin-bottom: 25px; color: #0f172a;">
             Business Hours
           </h4>
           <p style="color: #aaa; margin-bottom: 10px;">
@@ -254,12 +281,12 @@
           <p style="color: #aaa; margin-bottom: 30px;">
             8.30 Am - 5.30 Pm
           </p>
-          <h4 style="font-size: 22px; font-weight: 600; margin-bottom: 25px; color: #FFD700;">
+          <h4 style="font-size: 22px; font-weight: 600; margin-bottom: 25px; color: #0f172a;">
             Quick Links
           </h4>
           <p style="color: #aaa;">
-            <a href="company-profile.html" style="color: #FFD700; text-decoration: none; margin-right: 10px;">Company Profile</a> | 
-            <a href="projects.html" style="color: #FFD700; text-decoration: none; margin-left: 10px;">Our Projects</a>
+            <a href="company-profile.html" style="color: #0f172a; text-decoration: none; margin-right: 10px;">Company Profile</a> | 
+            <a href="projects.html" style="color: #0f172a; text-decoration: none; margin-left: 10px;">Our Projects</a>
           </p>
         </div>
       </div>
@@ -368,6 +395,8 @@
     });
   </script>
 
+
+    <div style="text-align: center; margin: 40px 0;"><a href="javascript:history.back()" style="display: inline-block; padding: 12px 25px; background-color: #3a7bd5; color: white; text-decoration: none; border-radius: 4px; font-size: 1.1rem; transition: background 0.3s ease;">← Back</a></div>
 </body>
 
 </html>
