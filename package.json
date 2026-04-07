@@ -1,0 +1,25 @@
+{
+  "name": "tritech",
+  "version": "1.0.0",
+  "description": "TRITECH",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chamudi-sys/Tritech-Mkt.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/chamudi-sys/Tritech-Mkt/issues"
+  },
+  "homepage": "https://github.com/chamudi-sys/Tritech-Mkt#readme",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
