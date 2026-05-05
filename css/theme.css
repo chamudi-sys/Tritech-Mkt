@@ -1,0 +1,709 @@
+/* ==============================================
+   TRITECH Dark / Light Theme System
+   ============================================== */
+
+/* ── Light Mode (default) ── */
+:root {
+  --bg: #FAFAFA;
+  --bg-alt: #f1f5f9;
+  --card-bg: #ffffff;
+  --card-border: rgba(0, 0, 0, 0.04);
+  --primary: #d97706;
+  --primary-glow: rgba(245, 158, 11, 0.15);
+  --text-main: #0f172a;
+  --text-secondary: #1e293b;
+  --text-muted: #475569;
+  --text-subtle: #64748b;
+  --text-faint: #94a3b8;
+  --border-color: #e2e8f0;
+  --chip-bg: #f8fafc;
+  --chip-border: #f1f5f9;
+  --icon-bg: #e2e8f0;
+  --social-bg: #f1f5f9;
+  --nav-bg: rgba(255, 255, 255, 0.85);
+  --nav-border: rgba(0, 0, 0, 0.05);
+  --hero-overlay: rgba(255, 255, 255, 0.9);
+  --hero-card-bg: rgba(255, 255, 255, 0.6);
+  --hero-card-border: rgba(255, 255, 255, 0.8);
+  --img-box-gradient: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+  --premium-details-bg: #ffffff;
+  --shadow-sm: 0 10px 30px rgba(0, 0, 0, 0.03);
+  --shadow-md: 0 15px 35px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.08);
+  --footer-bg: #ffffff;
+  --section-bg: transparent;
+  --form-bg: #f8fafc;
+  --form-border: #e2e8f0;
+  --glow-amber: rgba(245, 158, 11, 0.08);
+  --glow-blue: rgba(59, 130, 246, 0.06);
+}
+
+/* ── Dark Mode ── */
+[data-theme="dark"] {
+  --bg: #0f172a;
+  --bg-alt: #1e293b;
+  --card-bg: #1e293b;
+  --card-border: rgba(255, 255, 255, 0.06);
+  --primary: #f59e0b;
+  --primary-glow: rgba(245, 158, 11, 0.25);
+  --text-main: #f1f5f9;
+  --text-secondary: #e2e8f0;
+  --text-muted: #94a3b8;
+  --text-subtle: #64748b;
+  --text-faint: #475569;
+  --border-color: #334155;
+  --chip-bg: #1e293b;
+  --chip-border: #334155;
+  --icon-bg: #334155;
+  --social-bg: #334155;
+  --nav-bg: rgba(15, 23, 42, 0.9);
+  --nav-border: rgba(255, 255, 255, 0.05);
+  --hero-overlay: rgba(15, 23, 42, 0.85);
+  --hero-card-bg: rgba(30, 41, 59, 0.7);
+  --hero-card-border: rgba(255, 255, 255, 0.1);
+  --img-box-gradient: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+  --premium-details-bg: #1e293b;
+  --shadow-sm: 0 10px 30px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 15px 35px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.4);
+  --footer-bg: #0f172a;
+  --section-bg: transparent;
+  --form-bg: #1e293b;
+  --form-border: #334155;
+  --glow-amber: rgba(245, 158, 11, 0.12);
+  --glow-blue: rgba(59, 130, 246, 0.1);
+}
+
+/* ── Base Overrides ── */
+[data-theme="dark"] body,
+[data-theme="dark"] .sub_page {
+  background-color: var(--bg) !important;
+  color: var(--text-main) !important;
+}
+
+/* ── Navbar ── */
+[data-theme="dark"] .glass-nav {
+  background: var(--nav-bg) !important;
+  border-bottom-color: var(--nav-border) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
+}
+
+[data-theme="dark"] .glass-nav .nav-link {
+  color: var(--text-main) !important;
+}
+
+[data-theme="dark"] .glass-nav .nav-link:hover {
+  color: var(--primary) !important;
+}
+
+[data-theme="dark"] .glass-nav .btn {
+  color: var(--text-main) !important;
+}
+
+/* ── Hero ── */
+[data-theme="dark"] .hero-bg-accent {
+  background: radial-gradient(circle at center, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0.5) 60%, rgba(15, 23, 42, 0.2) 100%) !important;
+}
+
+[data-theme="dark"] .hero-content {
+  background: var(--hero-card-bg) !important;
+  border-color: var(--hero-card-border) !important;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3) !important;
+}
+
+[data-theme="dark"] .hero-title {
+  color: var(--text-main) !important;
+}
+
+[data-theme="dark"] .hero-desc {
+  color: var(--text-muted) !important;
+}
+
+/* ── Section Headers ── */
+[data-theme="dark"] .section-header h2 {
+  color: var(--text-main) !important;
+}
+
+/* ── Bento Cards ── */
+[data-theme="dark"] .bento-card {
+  background: var(--card-bg) !important;
+  border-color: var(--card-border) !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+[data-theme="dark"] .bento-card:hover {
+  box-shadow: var(--shadow-lg) !important;
+  border-color: rgba(245, 158, 11, 0.3) !important;
+}
+
+[data-theme="dark"] .bento-title {
+  color: var(--text-main) !important;
+}
+
+[data-theme="dark"] .bento-card .text-muted,
+[data-theme="dark"] .bento-card p {
+  color: var(--text-muted) !important;
+}
+
+/* ── Premium Product Cards ── */
+[data-theme="dark"] .premium-card {
+  background: var(--card-bg) !important;
+  border-color: var(--card-border) !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+[data-theme="dark"] .premium-img-box {
+  background: var(--img-box-gradient) !important;
+}
+
+[data-theme="dark"] .premium-img-box img {
+  mix-blend-mode: normal !important;
+}
+
+[data-theme="dark"] .premium-details {
+  background: var(--card-bg) !important;
+}
+
+[data-theme="dark"] .premium-details h4 {
+  color: var(--text-main) !important;
+}
+
+[data-theme="dark"] .premium-details p {
+  color: var(--text-muted) !important;
+}
+
+/* ── Explore Buttons ── */
+[data-theme="dark"] .explore-btn {
+  background: rgba(245, 158, 11, 0.15) !important;
+  color: var(--primary) !important;
+  border-color: rgba(245, 158, 11, 0.3) !important;
+}
+
+[data-theme="dark"] .explore-btn:hover {
+  background: #f59e0b !important;
+  color: #0f172a !important;
+}
+
+/* ── Ambient Glows ── */
+[data-theme="dark"] .ambient-glow-1 {
+  background: radial-gradient(circle, var(--glow-amber) 0%, transparent 70%) !important;
+}
+
+[data-theme="dark"] .ambient-glow-2 {
+  background: radial-gradient(circle, var(--glow-blue) 0%, transparent 70%) !important;
+}
+
+/* ── Footer ── */
+[data-theme="dark"] .footer_section,
+[data-theme="dark"] footer {
+  background: var(--footer-bg) !important;
+  border-top-color: var(--border-color) !important;
+  color: var(--text-main) !important;
+}
+
+/* Override ALL inline footer colors */
+[data-theme="dark"] footer h4,
+[data-theme="dark"] footer h5,
+[data-theme="dark"] footer h6,
+[data-theme="dark"] footer a[style*="color: #0f172a"],
+[data-theme="dark"] footer [style*="color: #0f172a"] {
+  color: var(--text-main) !important;
+}
+
+[data-theme="dark"] footer p,
+[data-theme="dark"] footer a[style*="color: #475569"],
+[data-theme="dark"] footer [style*="color: #475569"],
+[data-theme="dark"] footer a[style*="color: #64748b"],
+[data-theme="dark"] footer [style*="color: #64748b"] {
+  color: var(--text-muted) !important;
+}
+
+[data-theme="dark"] footer [style*="color: #94a3b8"],
+[data-theme="dark"] footer [style*="color: #cbd5e1"] {
+  color: var(--text-faint) !important;
+}
+
+[data-theme="dark"] footer [style*="border-top: 1px solid #e2e8f0"],
+[data-theme="dark"] footer [style*="border: 1px solid #f1f5f9"] {
+  border-color: var(--border-color) !important;
+}
+
+[data-theme="dark"] footer [style*="background: #f8fafc"],
+[data-theme="dark"] footer [style*="background: #f1f5f9"] {
+  background: var(--chip-bg) !important;
+}
+
+[data-theme="dark"] footer [style*="background: #e2e8f0"] {
+  background: var(--icon-bg) !important;
+}
+
+/* ── Contact Page ── */
+[data-theme="dark"] .contact_section {
+  background: transparent !important;
+}
+
+[data-theme="dark"] .contact_info,
+[data-theme="dark"] .contact_form,
+[data-theme="dark"] [style*="background: #ffffff"] {
+  background: var(--card-bg) !important;
+  border-color: var(--card-border) !important;
+}
+
+[data-theme="dark"] .contact_info h4,
+[data-theme="dark"] .contact_form h3 {
+  color: var(--text-main) !important;
+}
+
+[data-theme="dark"] .contact_info p,
+[data-theme="dark"] .contact_info i {
+  color: var(--text-main) !important;
+}
+
+[data-theme="dark"] .contact_info strong {
+  color: var(--text-main) !important;
+}
+
+[data-theme="dark"] .contact_info a {
+  color: var(--text-main) !important;
+}
+
+[data-theme="dark"] .map_container {
+  border-color: var(--card-border) !important;
+  box-shadow: var(--shadow-md) !important;
+}
+
+/* Form inputs */
+[data-theme="dark"] input,
+[data-theme="dark"] textarea {
+  background: var(--form-bg) !important;
+  border-color: var(--form-border) !important;
+  color: var(--text-main) !important;
+}
+
+[data-theme="dark"] input::placeholder,
+[data-theme="dark"] textarea::placeholder {
+  color: var(--text-subtle) !important;
+}
+
+/* ── About / Products / Sub Pages ── */
+[data-theme="dark"] .sub_page {
+  background-color: var(--bg) !important;
+}
+
+/* Override inline element colors across ALL pages */
+[data-theme="dark"] [style*="color: #0f172a"] {
+  color: var(--text-main) !important;
+}
+
+[data-theme="dark"] [style*="color: #1e293b"] {
+  color: var(--text-secondary) !important;
+}
+
+[data-theme="dark"] [style*="color: #475569"] {
+  color: var(--text-muted) !important;
+}
+
+[data-theme="dark"] [style*="color: #64748b"] {
+  color: var(--text-subtle) !important;
+}
+
+[data-theme="dark"] [style*="color: #94a3b8"] {
+  color: var(--text-faint) !important;
+}
+
+/* Background overrides */
+[data-theme="dark"] [style*="background: #ffffff"],
+[data-theme="dark"] [style*="background-color: #ffffff"],
+[data-theme="dark"] [style*="background:#ffffff"] {
+  background: var(--card-bg) !important;
+}
+
+[data-theme="dark"] [style*="background: #f1f5f9"],
+[data-theme="dark"] [style*="background-color: #f1f5f9"],
+[data-theme="dark"] [style*="background: #f8fafc"],
+[data-theme="dark"] [style*="background-color: #f8fafc"] {
+  background: var(--bg-alt) !important;
+}
+
+/* Border overrides */
+[data-theme="dark"] [style*="border-top: 1px solid #e2e8f0"],
+[data-theme="dark"] [style*="border: 1px solid rgba(0, 0, 0, 0.05)"],
+[data-theme="dark"] [style*="border: 1px solid #f1f5f9"] {
+  border-color: var(--border-color) !important;
+}
+
+/* h2, h3, h4 visible in dark mode */
+[data-theme="dark"] h2[style*="color: #0f172a"],
+[data-theme="dark"] h3[style*="color: #0f172a"],
+[data-theme="dark"] h4[style*="color: #0f172a"],
+[data-theme="dark"] h5[style*="color: #0f172a"],
+[data-theme="dark"] h6[style*="color: #0f172a"] {
+  color: var(--text-main) !important;
+}
+
+/* ── Toggle Button ── */
+.theme-toggle {
+  background: none;
+  border: 1.5px solid var(--border-color);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 15px;
+  font-size: 18px;
+  color: var(--text-main);
+}
+
+.theme-toggle:hover {
+  background: var(--primary-glow);
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: rotate(25deg);
+}
+
+.theme-toggle .fa-sun { display: none; }
+.theme-toggle .fa-moon { display: inline; }
+
+[data-theme="dark"] .theme-toggle .fa-sun { display: inline; }
+[data-theme="dark"] .theme-toggle .fa-moon { display: none; }
+
+/* Product category images in dark mode */
+[data-theme="dark"] .prod-category-img {
+  mix-blend-mode: normal !important;
+  filter: brightness(0.95);
+}
+
+/* Smooth top-level transition */
+html {
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+body {
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+/* ==============================================
+   MOBILE RESPONSIVE OVERRIDES
+   ============================================== */
+
+/* ── Tablet (≤992px) ── */
+@media (max-width: 992px) {
+  .modern-section {
+    padding: 80px 0 !important;
+  }
+
+  .section-header {
+    margin-bottom: 40px !important;
+  }
+
+  .section-header h2 {
+    font-size: 2.2rem !important;
+  }
+
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+  }
+
+  .premium-card:hover {
+    transform: none !important;
+  }
+
+  /* Footer: stack columns */
+  footer .row.mb-5 {
+    text-align: center !important;
+  }
+
+  footer .col-lg-4,
+  footer .col-lg-5,
+  footer .col-lg-3 {
+    text-align: center !important;
+  }
+
+  footer .col-lg-5 .row .col-6 ul {
+    text-align: center !important;
+  }
+
+  footer h5 {
+    justify-content: center !important;
+  }
+}
+
+/* ── Small Tablet / Large Phone (≤768px) ── */
+@media (max-width: 768px) {
+  /* Hero */
+  .hero {
+    height: 85vh !important;
+    min-height: 500px !important;
+  }
+
+  .hero-title {
+    font-size: 2.2rem !important;
+    letter-spacing: -0.5px !important;
+  }
+
+  .hero-content {
+    margin: 0 12px !important;
+    padding: 35px 20px !important;
+    border-radius: 20px !important;
+  }
+
+  .hero-desc {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+  }
+
+  /* All grids to single column */
+  .bento-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .bento-card {
+    padding: 25px 20px !important;
+    border-radius: 16px !important;
+  }
+
+  .bento-title {
+    font-size: 1.2rem !important;
+  }
+
+  .bento-icon {
+    font-size: 2rem !important;
+  }
+
+  /* Product category images */
+  .prod-category-img {
+    height: 100px !important;
+    margin-bottom: 15px !important;
+  }
+
+  /* Section padding */
+  .modern-section {
+    padding: 60px 0 !important;
+  }
+
+  .section-header {
+    margin-bottom: 30px !important;
+  }
+
+  .section-header h2 {
+    font-size: 1.8rem !important;
+  }
+
+  /* Premium product cards */
+  .premium-card {
+    border-radius: 16px !important;
+  }
+
+  .premium-img-box {
+    height: 200px !important;
+    padding: 15px !important;
+  }
+
+  .premium-details {
+    padding: 20px !important;
+  }
+
+  .premium-details h4 {
+    font-size: 1.2rem !important;
+  }
+
+  .premium-details p {
+    font-size: 0.9rem !important;
+    margin-bottom: 16px !important;
+  }
+
+  .explore-btn {
+    padding: 8px 20px !important;
+    font-size: 0.9rem !important;
+  }
+
+  /* Navbar */
+  .glass-nav {
+    padding: 10px 0 !important;
+  }
+
+  .glass-nav img[alt="Tritech"] {
+    height: 35px !important;
+  }
+
+  .theme-toggle {
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 15px !important;
+    margin-left: 10px !important;
+  }
+
+  /* Footer */
+  footer {
+    padding: 40px 0 15px !important;
+  }
+
+  footer .row.mb-5 {
+    margin-bottom: 20px !important;
+  }
+
+  footer .col-lg-4,
+  footer .col-lg-5,
+  footer .col-lg-3 {
+    text-align: center !important;
+    margin-bottom: 25px !important;
+  }
+
+  footer a[style*="font-size: 32px"] {
+    font-size: 26px !important;
+    justify-content: center !important;
+  }
+
+  footer p[style*="padding-right: 20px"] {
+    padding-right: 0 !important;
+  }
+
+  /* Footer bottom ribbon - stack vertically */
+  footer > div > div:last-child {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 15px !important;
+  }
+
+  footer > div > div:last-child > div {
+    justify-content: center !important;
+    width: 100% !important;
+  }
+
+  /* Footer contact chips - full width stack */
+  footer a[style*="border-radius: 12px"] {
+    flex: 1 !important;
+    min-width: 250px !important;
+    justify-content: center !important;
+  }
+
+  /* Contact page */
+  .contact_section {
+    padding-top: 120px !important;
+  }
+
+  .contact_info,
+  .contact_form {
+    padding: 25px !important;
+    border-radius: 12px !important;
+  }
+
+  .contact_form h3 {
+    font-size: 22px !important;
+  }
+
+  .map_container {
+    height: 250px !important;
+    border-radius: 12px !important;
+  }
+
+  /* About page headings */
+  .heading_container h2 {
+    font-size: 28px !important;
+  }
+
+  /* Ambient glows - hide on mobile to save render perf */
+  .ambient-glow-1,
+  .ambient-glow-2 {
+    display: none !important;
+  }
+}
+
+/* ── Phone (≤576px) ── */
+@media (max-width: 576px) {
+  .hero {
+    height: 80vh !important;
+    min-height: 450px !important;
+  }
+
+  .hero-title {
+    font-size: 1.8rem !important;
+  }
+
+  .hero-desc {
+    font-size: 0.9rem !important;
+  }
+
+  .hero-content {
+    padding: 30px 18px !important;
+    border-radius: 16px !important;
+  }
+
+  .section-header h2 {
+    font-size: 1.5rem !important;
+  }
+
+  .bento-card h3 {
+    font-size: 1.1rem !important;
+  }
+
+  .bento-card p {
+    font-size: 0.85rem !important;
+  }
+
+  .prod-category-img {
+    height: 80px !important;
+  }
+
+  /* Premium image box */
+  .premium-img-box {
+    height: 180px !important;
+  }
+
+  /* Footer chips stack completely */
+  footer a[style*="border-radius: 12px"] {
+    min-width: unset !important;
+    width: 100% !important;
+  }
+
+  /* Contact form full-bleed */
+  .contact_info,
+  .contact_form {
+    padding: 20px 16px !important;
+  }
+
+  input, textarea {
+    padding: 12px !important;
+    font-size: 14px !important;
+  }
+}
+
+/* ── Small Phone (≤400px) ── */
+@media (max-width: 400px) {
+  .hero-title {
+    font-size: 1.5rem !important;
+  }
+
+  .hero-content {
+    padding: 25px 15px !important;
+  }
+
+  .section-header h2 {
+    font-size: 1.3rem !important;
+  }
+
+  .glass-nav img[alt="Tritech"] {
+    height: 30px !important;
+  }
+
+  .theme-toggle {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 13px !important;
+  }
+}
+
+/* ── Prevent horizontal overflow globally ── */
+html, body {
+  overflow-x: hidden !important;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

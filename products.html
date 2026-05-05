@@ -45,54 +45,12 @@
     }
     
     .section-title {
-      color: #ffffff !important;
+      color: #000000 !important;
       text-shadow: 0 2px 4px rgba(0,0,0,0.5);
     }
     
     .category-header h3 {
-      color: #ffffff !important;
-    }
-    
-    .product-card {
-      background: #1e1e1e !important;
-      border: 1px solid #333;
-      transition: all 0.4s ease;
-    }
-    
-    .product-card:hover {
-      transform: translateY(-5px) !important;
-      box-shadow: 0 15px 30px rgba(0,0,0,0.3) !important;
-      border-color: #555;
-    }
-    
-    /* CHANGED: White background for product images */
-    .product-image-container {
-      background: #ffffff !important; /* Changed from #2a2a2a to white */
-      padding: 20px;
-    }
-    
-    .product-details {
-      background: #252525 !important;
-    }
-    
-    .product-details h4 {
-      color: #ffffff !important;
-    }
-    
-    .product-details p {
-      color: #b0b0b0 !important;
-    }
-    
-    .product-link {
-      color: #FFD700 !important;
-    }
-    
-    .product-link:hover {
-      color: #ffffff !important;
-    }
-    
-    .product-link span {
-      background: #FFD700 !important;
+      color: #000000 !important;
     }
   </style>
 
@@ -138,8 +96,91 @@ h1, h2, h3, h4, h5, h6, .navbar-brand, .nav-link, .elegant-heading, .service-tit
 .sub_page {
     background-color: #f1f5f9 !important;
 }
+
+/* Premium Product Cards */
+.premium-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  border-radius: 24px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+.premium-card:hover {
+  transform: scale(1.02) translateY(-10px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+}
+
+.premium-img-box {
+  height: 240px;
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+}
+
+.premium-img-box img {
+  transition: all 0.5s ease;
+}
+
+.premium-card:hover .premium-img-box img {
+  transform: scale(1.08);
+}
+
+.premium-details {
+  padding: 30px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: #ffffff;
+}
+
+.premium-details h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.premium-details p {
+  color: #475569;
+  margin-bottom: 24px;
+  font-size: 1rem;
+  flex-grow: 1;
+}
+
+.explore-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(245, 158, 11, 0.1);
+  color: #d97706;
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.explore-btn:hover {
+  background: #f59e0b;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 10px 20px rgba(245, 158, 11, 0.15);
+}
 </style>
 
+  <link rel="stylesheet" href="css/theme.css" />
 </head>
 
 <body>
@@ -156,6 +197,7 @@ h1, h2, h3, h4, h5, h6, .navbar-brand, .nav-link, .elegant-heading, .service-tit
         <a href="products.html" class="nav-link">Products</a>
         <a href="contact.html" class="nav-link">Contact Us</a>
       </div>
+      <button class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark/light mode"><i class="fas fa-moon"></i><i class="fas fa-sun"></i></button>
       <button class="btn d-lg-none" style="color:#0f172a;"><i class="fa fa-bars" style="font-size: 1.5rem;"></i></button>
     </div>
   </nav>
@@ -186,57 +228,29 @@ h1, h2, h3, h4, h5, h6, .navbar-brand, .nav-link, .elegant-heading, .service-tit
             </div>
             <div class="row justify-content-center">
                 <!-- Aquatherm Pipes -->
-                <div class="col-md-5 col-lg-4 mb-5 animate-on-scroll" style="opacity: 0; transition: all 0.6s ease 0.2s;">
-                    <div class="product-card" style="height: 100%; border-radius: 8px; overflow: hidden; 
-                                                   box-shadow: 0 10px 20px rgba(0,0,0,0.2); transition: all 0.4s ease;">
-                        <div class="product-image-container" style="overflow: hidden; height: 220px; display: flex; align-items: center; justify-content: center;">
-                            <img src="images/2.jpg" alt="Aquatherm Pipes" 
-                                 style="max-height: 100%; max-width: 100%; object-fit: contain; transition: all 0.5s ease;">
+                <div class="col-md-5 col-lg-4 mb-5 animate-on-scroll" style="opacity: 0; transition: all 0.6s ease 0.2s; order: 2;">
+                    <div class="premium-card">
+                        <div class="premium-img-box">
+                            <img src="images/2.jpg" alt="Aquatherm Pipes">
                         </div>
-                        <div class="product-details" style="padding: 25px; height: 220px; display: flex; flex-direction: column;">
-                            <h4 style="font-size: 20px; font-weight: 600; margin-bottom: 15px; text-align: center;">
-                                Aquatherm Pipes
-                            </h4>
-                            <p style="margin-bottom: 20px; text-align: center; line-height: 1.6; flex-grow: 1;">
-                                High-quality piping solutions for various applications with excellent durability and performance.
-                            </p>
-                            <div style="text-align: center;">
-                                <a href="aquatherm-details.html" class="product-link" 
-                                   style="font-weight: 500; font-size: 16px; position: relative; 
-                                          display: inline-block; transition: all 0.3s ease; text-decoration: none;">
-                                    Explore Product
-                                    <span style="position: absolute; width: 0; height: 1px; bottom: -2px; left: 0; 
-                                                transition: width 0.3s ease;"></span>
-                                </a>
-                            </div>
+                        <div class="premium-details">
+                            <h4>Aquatherm Pipes</h4>
+                            <p>High-quality piping solutions for various applications with excellent durability and performance.</p>
+                            <a href="aquatherm-details.html" class="explore-btn">Discover Product <i class="fa fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
                 
                 <!-- HDPE Pipes -->
-                <div class="col-md-5 col-lg-4 mb-5 animate-on-scroll" style="opacity: 0; transition: all 0.6s ease 0.3s;">
-                    <div class="product-card" style="height: 100%; border-radius: 8px; overflow: hidden; 
-                                                   box-shadow: 0 10px 20px rgba(0,0,0,0.2); transition: all 0.4s ease;">
-                        <div class="product-image-container" style="overflow: hidden; height: 220px; display: flex; align-items: center; justify-content: center;">
-                            <img src="images/th.jpg" alt="HDPE Pipes" 
-                                 style="max-height: 100%; max-width: 100%; object-fit: contain; transition: all 0.5s ease;">
+                <div class="col-md-5 col-lg-4 mb-5 animate-on-scroll" style="opacity: 0; transition: all 0.6s ease 0.3s; order: 3;">
+                    <div class="premium-card">
+                        <div class="premium-img-box">
+                            <img src="images/th.jpg" alt="HDPE Pipes">
                         </div>
-                        <div class="product-details" style="padding: 25px; height: 220px; display: flex; flex-direction: column;">
-                            <h4 style="font-size: 20px; font-weight: 600; margin-bottom: 15px; text-align: center;">
-                                HDPE Pipes
-                            </h4>
-                            <p style="margin-bottom: 20px; text-align: center; line-height: 1.6; flex-grow: 1;">
-                                Durable and flexible HDPE pipes suitable for industrial and residential applications.
-                            </p>
-                            <div style="text-align: center;">
-                                <a href="HDPE-details.html" class="product-link" 
-                                   style="font-weight: 500; font-size: 16px; position: relative; 
-                                          display: inline-block; transition: all 0.3s ease; text-decoration: none;">
-                                    Explore Product
-                                    <span style="position: absolute; width: 0; height: 1px; bottom: -2px; left: 0; 
-                                                transition: width 0.3s ease;"></span>
-                                </a>
-                            </div>
+                        <div class="premium-details">
+                            <h4>HDPE Pipes</h4>
+                            <p>Durable and flexible HDPE pipes suitable for industrial and residential applications.</p>
+                            <a href="HDPE-details.html" class="explore-btn">Discover Product <i class="fa fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -254,140 +268,70 @@ h1, h2, h3, h4, h5, h6, .navbar-brand, .nav-link, .elegant-heading, .service-tit
             <div class="row justify-content-center">
                 <!-- Heng Long Pumps -->
                 <div class="col-md-5 col-lg-4 mb-5 animate-on-scroll" style="opacity: 0; transition: all 0.6s ease 0.2s;">
-                    <div class="product-card" style="height: 100%; border-radius: 8px; overflow: hidden; 
-                                                   box-shadow: 0 10px 20px rgba(0,0,0,0.2); transition: all 0.4s ease;">
-                        <div class="product-image-container" style="overflow: hidden; height: 220px; display: flex; align-items: center; justify-content: center;">
-                            <img src="images/3.jpg" alt="Heng Long Pumps" 
-                                 style="max-height: 100%; max-width: 100%; object-fit: contain; transition: all 0.5s ease;">
+                    <div class="premium-card">
+                        <div class="premium-img-box">
+                            <img src="images/3.jpg" alt="Heng Long Pumps">
                         </div>
-                        <div class="product-details" style="padding: 25px; height: 220px; display: flex; flex-direction: column;">
-                            <h4 style="font-size: 20px; font-weight: 600; margin-bottom: 15px; text-align: center;">
-                                Heng Long Pumps
-                            </h4>
-                            <p style="margin-bottom: 20px; text-align: center; line-height: 1.6; flex-grow: 1;">
-                                Reliable and efficient pumping solutions for various industrial applications.
-                            </p>
-                            <div style="text-align: center;">
-                                <a href="Heng-Long-details.html" class="product-link" 
-                                   style="font-weight: 500; font-size: 16px; position: relative; 
-                                          display: inline-block; transition: all 0.3s ease; text-decoration: none;">
-                                    Explore Product
-                                    <span style="position: absolute; width: 0; height: 1px; bottom: -2px; left: 0; 
-                                                transition: width 0.3s ease;"></span>
-                                </a>
-                            </div>
+                        <div class="premium-details">
+                            <h4>Heng Long Pumps</h4>
+                            <p>Reliable and efficient pumping solutions for various industrial applications.</p>
+                            <a href="Heng-Long-details.html" class="explore-btn">Discover Product <i class="fa fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
                 
                 <!-- EVERGUSH Pumps -->
                 <div class="col-md-5 col-lg-4 mb-5 animate-on-scroll" style="opacity: 0; transition: all 0.6s ease 0.3s;">
-                    <div class="product-card" style="height: 100%; border-radius: 8px; overflow: hidden; 
-                                                   box-shadow: 0 10px 20px rgba(0,0,0,0.2); transition: all 0.4s ease;">
-                        <div class="product-image-container" style="overflow: hidden; height: 220px; display: flex; align-items: center; justify-content: center;">
-                            <img src="images/4.jpg" alt="EVERGUSH Pumps" 
-                                 style="max-height: 100%; max-width: 100%; object-fit: contain; transition: all 0.5s ease;">
+                    <div class="premium-card">
+                        <div class="premium-img-box">
+                            <img src="images/4.jpg" alt="EVERGUSH Pumps">
                         </div>
-                        <div class="product-details" style="padding: 25px; height: 220px; display: flex; flex-direction: column;">
-                            <h4 style="font-size: 20px; font-weight: 600; margin-bottom: 15px; text-align: center;">
-                                EVERGUSH Pumps
-                            </h4>
-                            <p style="margin-bottom: 20px; text-align: center; line-height: 1.6; flex-grow: 1;">
-                                High-performance pumps designed for continuous operation and maximum efficiency.
-                            </p>
-                            <div style="text-align: center;">
-                                <a href="EVERGUSH-details.html" class="product-link" 
-                                   style="font-weight: 500; font-size: 16px; position: relative; 
-                                          display: inline-block; transition: all 0.3s ease; text-decoration: none;">
-                                    Explore Product
-                                    <span style="position: absolute; width: 0; height: 1px; bottom: -2px; left: 0; 
-                                                transition: width 0.3s ease;"></span>
-                                </a>
-                            </div>
+                        <div class="premium-details">
+                            <h4>EVERGUSH Pumps</h4>
+                            <p>High-performance pumps designed for continuous operation and maximum efficiency.</p>
+                            <a href="EVERGUSH-details.html" class="explore-btn">Discover Product <i class="fa fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Calpeda Pumps -->
-                <div class="col-md-5 col-lg-4 mb-5 animate-on-scroll" style="opacity: 0; transition: all 0.6s ease 0.4s;">
-                    <div class="product-card" style="height: 100%; border-radius: 8px; overflow: hidden; 
-                                                   box-shadow: 0 10px 20px rgba(0,0,0,0.2); transition: all 0.4s ease;">
-                        <div class="product-image-container" style="overflow: hidden; height: 220px; display: flex; align-items: center; justify-content: center;">
-                            <img src="images/1.png" alt="Calpeda Pumps" 
-                                 style="max-height: 100%; max-width: 100%; object-fit: contain; transition: all 0.5s ease;">
+                <div class="col-md-5 col-lg-4 mb-5 animate-on-scroll" style="opacity: 0; transition: all 0.6s ease 0.4s; order: 5;">
+                    <div class="premium-card">
+                        <div class="premium-img-box">
+                            <img src="images/1.png" alt="Calpeda Pumps">
                         </div>
-                        <div class="product-details" style="padding: 25px; height: 220px; display: flex; flex-direction: column;">
-                            <h4 style="font-size: 20px; font-weight: 600; margin-bottom: 15px; text-align: center;">
-                                Calpeda Pumps
-                            </h4>
-                            <p style="margin-bottom: 20px; text-align: center; line-height: 1.6; flex-grow: 1;">
-                                Italian-engineered pumps known for quality, reliability, and innovative design.
-                            </p>
-                            <div style="text-align: center;">
-                                <a href="Calpeda-details.html" class="product-link" 
-                                   style="font-weight: 500; font-size: 16px; position: relative; 
-                                          display: inline-block; transition: all 0.3s ease; text-decoration: none;">
-                                    Explore Product
-                                    <span style="position: absolute; width: 0; height: 1px; bottom: -2px; left: 0; 
-                                                transition: width 0.3s ease;"></span>
-                                </a>
-                            </div>
+                        <div class="premium-details">
+                            <h4>Calpeda Pumps</h4>
+                            <p>Italian-engineered pumps known for quality, reliability, and innovative design.</p>
+                            <a href="Calpeda-details.html" class="explore-btn">Discover Product <i class="fa fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
                 
                 <!-- TSURUMI Pumps -->
-                <div class="col-md-5 col-lg-4 mb-5 animate-on-scroll" style="opacity: 0; transition: all 0.6s ease 0.5s;">
-                    <div class="product-card" style="height: 100%; border-radius: 8px; overflow: hidden; 
-                                                   box-shadow: 0 10px 20px rgba(0,0,0,0.2); transition: all 0.4s ease;">
-                        <div class="product-image-container" style="overflow: hidden; height: 220px; display: flex; align-items: center; justify-content: center;">
-                            <img src="images/5.png" alt="TSURUMI Pumps" 
-                                 style="max-height: 100%; max-width: 100%; object-fit: contain; transition: all 0.5s ease;">
+                <div class="col-md-5 col-lg-4 mb-5 animate-on-scroll" style="opacity: 0; transition: all 0.6s ease 0.5s; order: 4;">
+                    <div class="premium-card">
+                        <div class="premium-img-box">
+                            <img src="images/5.png" alt="TSURUMI Pumps">
                         </div>
-                        <div class="product-details" style="padding: 25px; height: 220px; display: flex; flex-direction: column;">
-                            <h4 style="font-size: 20px; font-weight: 600; margin-bottom: 15px; text-align: center;">
-                                TSURUMI Pumps
-                            </h4>
-                            <p style="margin-bottom: 20px; text-align: center; line-height: 1.6; flex-grow: 1;">
-                                Japanese-engineered submersible pumps known for durability and high performance.
-                            </p>
-                            <div style="text-align: center;">
-                                <a href="TSURUMI-details.html" class="product-link" 
-                                   style="font-weight: 500; font-size: 16px; position: relative; 
-                                          display: inline-block; transition: all 0.3s ease; text-decoration: none;">
-                                    Explore Product
-                                    <span style="position: absolute; width: 0; height: 1px; bottom: -2px; left: 0; 
-                                                transition: width 0.3s ease;"></span>
-                                </a>
-                            </div>
+                        <div class="premium-details">
+                            <h4>TSURUMI Pumps</h4>
+                            <p>Japanese-engineered submersible pumps known for durability and high performance.</p>
+                            <a href="TSURUMI-details.html" class="explore-btn">Discover Product <i class="fa fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
                 
                 <!-- SPERONI Pumps -->
-                <div class="col-md-5 col-lg-4 mb-5 animate-on-scroll" style="opacity: 0; transition: all 0.6s ease 0.6s;">
-                    <div class="product-card" style="height: 100%; border-radius: 8px; overflow: hidden; 
-                                                   box-shadow: 0 10px 20px rgba(0,0,0,0.2); transition: all 0.4s ease;">
-                        <div class="product-image-container" style="overflow: hidden; height: 220px; display: flex; align-items: center; justify-content: center;">
-                            <img src="images/6.png" alt="SPERONI Pumps" 
-                                 style="max-height: 100%; max-width: 100%; object-fit: contain; transition: all 0.5s ease;">
+                <div class="col-md-5 col-lg-4 mb-5 animate-on-scroll" style="opacity: 0; transition: all 0.6s ease 0.6s; order: 1;">
+                    <div class="premium-card">
+                        <div class="premium-img-box">
+                            <img src="images/6.png" alt="SPERONI Pumps">
                         </div>
-                        <div class="product-details" style="padding: 25px; height: 220px; display: flex; flex-direction: column;">
-                            <h4 style="font-size: 20px; font-weight: 600; margin-bottom: 15px; text-align: center;">
-                                SPERONI Pumps
-                            </h4>
-                            <p style="margin-bottom: 20px; text-align: center; line-height: 1.6; flex-grow: 1;">
-                                High-quality Italian water pumps offering excellent performance and energy efficiency.
-                            </p>
-                            <div style="text-align: center;">
-                                <a href="SPERONI-details.html" class="product-link" 
-                                   style="font-weight: 500; font-size: 16px; position: relative; 
-                                          display: inline-block; transition: all 0.3s ease; text-decoration: none;">
-                                    Explore Product
-                                    <span style="position: absolute; width: 0; height: 1px; bottom: -2px; left: 0; 
-                                                transition: width 0.3s ease;"></span>
-                                </a>
-                            </div>
+                        <div class="premium-details">
+                            <h4>SPERONI Pumps</h4>
+                            <p>High-quality Italian water pumps offering excellent performance and energy efficiency.</p>
+                            <a href="SPERONI-details.html" class="explore-btn">Discover Product <i class="fa fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -614,6 +558,7 @@ h1, h2, h3, h4, h5, h6, .navbar-brand, .nav-link, .elegant-heading, .service-tit
     });
   </script>
 
+  <script src="js/theme.js"></script>
 </body>
 
 </html>
